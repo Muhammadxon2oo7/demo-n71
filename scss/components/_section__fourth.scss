@@ -1,0 +1,70 @@
+.section__fourth{
+    padding-top: 140px;
+    padding-bottom: 164px;
+    background-color: $sixth;
+    background-image: url('../../img/section__fourth__top.svg'), url('../../img/section__fourth__bottom.svg');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+  
+    .container{
+        .content__Wrapper{
+            margin-bottom: 48px;
+            @include flex(center,unset);
+            
+            h2{
+                max-width: 573px;
+                width: 100%;
+                @include text(700,32px,#fff,center,0px);
+                span{
+                    @include text(700,32px,$fourth,unset,0px);
+                }
+            }
+        }
+        .cards__wrapper{
+            width: 100%;
+            @include flex(center,unset);
+            .card{
+                max-width: 573px;
+                background-image: url('../../img/quote.svg');
+                background-position: center top;
+                background-repeat: no-repeat;
+                padding-top: 36px;
+                @include flex(center,unset);
+                &:not(:last-child){
+                    margin-bottom: 48px;
+                }
+                .dec{
+                    margin-bottom: 16px;
+                    p{
+                        width: 100%;
+                        &:first-child{
+                            @include text(600,15px,#fff,center,16px);
+                        }
+                        &:last-child{
+                            @include text(500,13px,#fff,center,0px);
+                            font-family:italic;
+                        }
+                    }
+                    h3{
+                        width: 100%;
+                        @include text(700,18px,$fourth,center,2px)
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:992px){
+    .section__fourth{
+        .container{
+            .cards__wrapper{
+                @include flex(center,unset);
+                gap: 30px;
+                .card{
+                    width: 350px;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.last__section{
+    background-color: $second;
+    padding-top: 83px;
+    padding-bottom: 83px;
+    background-image: url('../../img/last__sectionbg.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    .container{
+        .content__wrapper{
+            width: 100%;
+            @include flex(center,center);
+            h2{
+                width: 100%;
+                @include text(700,32px,$seventh,center,24px);
+            }
+            button{
+                @include btn(153px,transparent, 2px solid $seventh,24px);
+                @include text(600,18px,$seventh,center,0px)
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    .last__section{
+        .container{
+            .content__wrapper{
+                width: 100%;
+                @include flex(space-between,center);
+                h2{
+                    max-width: 70%;
+                    @include flex(flex-start,center);
+                    flex-grow: 1;
+                    @include text(700,32px,$seventh,left,0px);
+                
+                }
+                button{
+                    width: 153px;
+                }
+            
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:992px){
+    .last__section{
+        .container{
+            .content__wrapper{
+                width: 100%;
+                @include flex(space-between,center);
+                h2{
+                    max-width: 70%;
+                    @include flex(flex-start,center);
+                    flex-grow: 1;
+                    @include text(700,48px,$seventh,left,0px);
+                
+                }
+                button{
+                    width: 153px;
+                }
+            
+            }
+        }
+    }
+}

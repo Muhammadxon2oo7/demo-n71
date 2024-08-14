@@ -1,0 +1,23 @@
+@mixin text($weight,$fz,$color,$align,$mb){
+    font-weight: $weight;
+    font-size: $fz;
+    line-height: 100%;
+    text-align: $align;
+    color: $color;
+    margin-bottom: $mb;
+}
+@mixin btn($w,$bg,$border,$br){
+    width: $w;
+    height: 48px;
+    border: $border;
+    background-color:$bg;
+    border-radius: $br;
+    cursor: pointer;
+}
+
+@mixin flex($jc,$al){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $jc;
+    align-items: $al;
+}

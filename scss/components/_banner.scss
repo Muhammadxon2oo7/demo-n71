@@ -1,0 +1,86 @@
+.banner{
+    background-color: $first;
+    
+    .container{
+        padding-top: 80px;
+        width: 100%;
+        background-image: url('../../img/container__bottom.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        padding-bottom: 197px;
+        .content__wrapper{
+            width: 100%;
+            @include flex(center,center);
+        
+            h1{
+                width: 100%;
+                @include text(700,40px,#fff,center,18px);
+                span{
+                    @include text(700,40px,$second,center,0);
+                }
+            }
+            p{
+                width: 327px;
+                @include text(600,15px,#fff,center,0px);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px){
+    .banner{
+        .container{
+            @include flex(center,center);
+            .content__wrapper{
+                @include flex(center,center);
+                max-width: 683px;
+                h1{
+                    @include text(700,64px,#fff,center,24px);
+                    span{
+                        @include text(700,64px,$second,center,0);
+                    
+                    }
+                }
+                p{
+                    width: 457px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:992px){
+    .banner{
+        background-image: url('../../img/banner__left.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+        .container{
+            padding-top: 129px;
+            @include flex(center,center);
+            background-position: right 165px bottom;
+            .content__wrapper{
+                max-width: 100%;
+                @include flex(unset,flex-end);
+                h1{
+                    width: 542px;
+                    @include text(700,100px,#fff,left,10px);
+
+                }
+                p{
+                    width: 457px;
+                    @include text(600,18px,#fff,left,0);
+                    &::before{
+                        content: '';
+                        width: 50px;
+                        height: 4px;
+                        top: 0;
+                        left: 0;
+                        background-color: $fourth;
+                        display:block;
+                        margin-bottom: 79px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

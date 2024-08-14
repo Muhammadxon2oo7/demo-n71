@@ -1,0 +1,117 @@
+.section__three{
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: $seventh;
+    background-image: url('../../img/section__three.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    .container{
+        .content__wrapper{
+            width: 240px;
+            h2{
+                @include text(700,32px,#fff,unset,0px);
+                &::before{
+                    content: '';
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 4px;
+                    background-color: $second; 
+                    margin-bottom: 32px;
+                }
+            }
+            margin-bottom: 56px;
+        }
+        .cards__wrapper{
+            @include flex(center,unset);
+            .card{
+                width: 100%;
+                @include flex(center,unset);
+                .img__wrapper{
+                    margin-bottom: 16px;
+                    width: 56px;
+                    height: 56px;
+                    background-color: $fifth;
+                    position: relative;
+                    border-radius: 50%;
+
+                    img{
+
+                        position: absolute;
+                        top: -16px;
+                        left: -16px;
+                    }
+                }
+                .card__content{
+                    width: 100%;
+                    max-width: 478px;
+                    h3{
+                        @include text(700,18px,$second,center,8px)
+                    }
+                    p{
+                        @include text(600,15px,#fff,center,0px)
+                    }
+                }
+                
+                &:not(:last-child){
+                    margin-bottom: 48px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:670px){
+    .section__three{
+        .container{
+            .content__wrapper{
+                margin-bottom: 64px;
+                width: 445px;
+            }
+            .cards__wrapper{
+            @include flex(unset,unset);
+
+                .card{
+                    @include flex(unset,unset);
+                    .img__wrapper{
+                        margin-right: 23px;
+                    }
+                    .card__content{
+                        h3{
+                            text-align: left;
+                            margin-bottom: 16px;
+                        }
+                        p{
+                            text-align: left;
+                        }
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:992px){
+    .section__three{
+        .container{
+            @include flex(space-between,unset);
+            .content__wrapper{
+                width: 445px;
+                h2{
+                    @include text(700,48px,#fff,unset,0px);
+                
+                }
+            }
+            .cards__wrapper{
+                width: 540px;
+                .card{
+                    width: auto;
+                    @include flex(space-between,unset);
+                    
+                }
+            }
+        }
+    }
+}
